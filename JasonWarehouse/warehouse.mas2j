@@ -1,0 +1,20 @@
+MAS warehouse {
+
+	infrastructure: Centralised
+
+	environment:
+		warehouse.WareEnv("warehouse.mas2j")
+		
+	agents:
+		coordinator;
+		dispatcher;
+		forkExit ;
+		humanExit #2;
+		supplier;
+		human #2 ;
+		forklift #2 ;
+
+
+	aslSourcePath:
+		"src/asl";
+}
