@@ -39,7 +39,7 @@
 <-	.send(coordinator,achieve,transport(Item,Weight));
 .
 
-
+@trans[atomic]
 +!transportItem(Loc,Item,Weight):not stop
 <- 	!go(Loc);
 	drop(Loc);
@@ -48,10 +48,10 @@
 	
 	.send(supplier,achieve,notreserved(Item));
 //	.send(coordinator,achieve,dispatch(Loc,50));
-	!insert(Item,Loc,Weight);
+	!insert(Item,Weight,Loc);
 //	!go(restArea);
 	.
--!transportItem(Loc,Weight,Item):true
+-!transportItem(Loc,Item,Weight):true
 <- .print("Error during transport");
 	putBack;
 	move_to(restArea);

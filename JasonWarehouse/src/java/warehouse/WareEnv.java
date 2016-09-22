@@ -123,7 +123,8 @@ public class WareEnv extends Environment {
 				result = server.putBack(ag );			
 			} 
 			else if (action.getFunctor().equals("insert")) {
-				result = server.insert(action.getTerm(0).toString(),action.getTerm(2).toString(),action.getTerm(1).toString());			
+				//insert(Item,Loc,Weight)
+				result = server.insert(action.getTerm(0).toString(),action.getTerm(1).toString(),action.getTerm(2).toString());			
 			}
 			else if (action.getFunctor().equals("save")) {
 				result = server.save();			

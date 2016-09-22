@@ -68,7 +68,7 @@ public class View extends World {
 		System.out.println("Created shelves");
 		drawBorders();
 		
-//		drawLines();
+		drawLines();
 		drawAgents();
 		System.out.println("Created Agents");
 		drawControlPanel();
@@ -364,7 +364,7 @@ public class View extends World {
 
 		total+=time/1000;
 		totalidle+=idle/1000;
-		double avg = totalidle/Environment.AgList.size();
+		double avg = totalidle/total;//Environment.AgList.size();
 //		Urate = (total-totalidle)/total;
 //		Urate/=100;
 //		 

@@ -39,7 +39,7 @@
 <- -reserved(Item);
 	.broadcast(achieve,newItem(Item));
 .
-
+-!failed(Item)[source(Ag)]:true <- .print("Failed from",Ag," for ",Item). 
 -!reserveItem(Item): true <- .print("ERROR reserving").
 
 +!newOrder : true <- .print("Order is in").

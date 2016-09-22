@@ -30,7 +30,7 @@ public class DB {
 		 Statement stmt = null;
 		 Connection con = null;
 		 try{
-			 con = this.getDBConnection();
+			 con = DB.getDBConnection();
 			 stmt = con.createStatement();
 			 
 		      String sql = "CREATE TABLE  " + table +
@@ -65,6 +65,7 @@ public class DB {
 	         String  name = rs.getString("name");
 	         double weight = rs.getDouble("weight");  
 	         i = new Item(name,weight);
+	         i.id=id;
 	         i.location = rs.getString("location");
 	         rs.close();
 		     stmt.close();

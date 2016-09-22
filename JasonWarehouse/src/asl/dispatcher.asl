@@ -53,7 +53,7 @@
 -!dispatch : true
 <-	.print("No items stored yet");
 	.random(T);
-	Time = T * 4000;
+	Time = T * 20000;
 	.wait(Time);
 	!dispatch;
 	.
